@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&display=swap");
+
+html {
+  font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  --primary: #e95c20ff;
+  --secondary: #2d2926ff;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+  height: 100%;
+}
+
+.grid-container {
+  height: 100vh;
+
+  /* grid container settings */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.grid-container > header {
+  grid-area: header;
+  height: 6vh;
+}
+
+.badge {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 2px;
+}
+.fa-shopping-cart,
+.fa-user {
+  font-size: 2.5rem;
+}
+.grid-container > main {
+  grid-area: main;
+  padding: 20px 5px 10px 5px;
+}
+
+.grid-container > footer {
+  grid-area: footer;
+  height: 7vh;
+  background: #556270;
+  background: -webkit-linear-gradient(to left, var(--primary), #556270);
+  background: linear-gradient(to left, var(--primary), #556270);
+}
+
+/*hero*/
+
+.hero {
+  margin: 0;
+  margin-bottom: 6rem;
+  height: 85vh;
+
+  font-size: 3rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./imgs/hero1.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero > div {
+  position: absolute;
+  background-color: transparent;
+
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffff;
+  letter-spacing: 0.8px;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  padding: 30px;
+}
+
+.hero p:first-child {
+  font-size: 5rem;
+  font-family: "Bangers", cursive;
+  font-family: "Bebas Neue", cursive;
+  /*border-bottom: 3px solid var(--secondary);*/
+  margin-bottom: 0.2rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px #1f1e1e;
+}
+.action-btn {
+  background-color: var(--secondary);
+  color: #ffff;
+  padding: 10px 40px;
+  text-transform: uppercase;
+}
+
+/*heading*/
+
+.heading {
+  text-align: center;
+  color: var(--primary);
+}
+.heading > h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+}
+
+/* Common */
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2 {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #556270;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+}
+input,
+select,
+textarea,
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+button {
+  background-color: #f8f8f8;
+  cursor: pointer;
+  border: none;
+}
+input:hover,
+select:hover,
+textarea:hover,
+button:hover {
+  border: 0.1rem var(--primary) solid;
+}
+button.primary {
+  background-color: var(--primary);
+}
+button.trans {
+  background-color: transparent;
+  border: 3px solid var(--primary);
+  color: var(--primary);
+  padding: 15px 25px;
+  font-size: 2rem;
+}
+button.block {
+  width: 100%;
+}
+button.small {
+  font-size: 1.2rem;
+}
+.loading {
+  display: block;
+}
+/* Header */
+header a {
+  color: var(--secondary);
+  padding: 1rem;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+a.brand {
+  color: var(--primary);
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding-top: 2rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.center {
+  justify-content: center;
+}
+.row.around {
+  justify-content: space-around;
+}
+
+.row.top {
+  align-items: flex-start;
+}
+
+.row.start {
+  justify-content: flex-start;
+}
+.col-30 {
+  width: 30%;
+}
+.col-1 {
+  flex: 1 1 25rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
+.col-3 {
+  flex: 32 1 75rem;
+}
+.min-30 {
+  min-width: 30rem;
+}
+.p-1 {
+  padding: 1rem;
+}
+.bk-to-shopping {
+  font-size: 2em;
+  margin-left: 50px;
+}
+/* Image */
+img {
+  border-radius: 0.5rem;
+}
+img.small {
+  max-width: 6rem;
+  width: 100%;
+}
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+img.large {
+  max-width: 40rem;
+  width: 100%;
+}
+
+/* Card */
+.card {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body {
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+.price {
+  font-size: 2rem;
+}
+/* Rating */
+.rating span {
+  color: var(--primary);
+  margin: 0.1rem;
+}
+.rating span:last-child {
+  color: #556270;
+}
+/* Alert */
+.loading {
+  display: block !important;
+}
+.success {
+  color: #20a020;
+}
+.danger {
+  color: #a02020;
+}
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+.alert-danger {
+  color: #a02020;
+  background-color: #ffe0e0;
+}
+.alert-success {
+  color: #20a020;
+  background-color: #eeffe0;
+}
+
+/*Form*/
+
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.form label {
+  margin: 1rem;
+  display: block;
+}
+.form label {
+  margin: 1rem 0;
+}
+/* Dropdown */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: var(--primary);
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+  font-size: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Checkout Steps */
+.checkout-steps > div {
+  border-top: 0.3rem #556270 solid;
+  color: #556270;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+.checkout-steps > div.active {
+  border-top-color: var(--primary);
+  color: var(--primary);
+}
+/*table*/
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table thead {
+  background-color: var(--primary);
+}
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+.table td,
+.table th {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+}
+.table button {
+  margin: 0 0.2rem;
+}

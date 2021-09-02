@@ -1,0 +1,5 @@
+export const ADD_ITEM = "ADD_ITEM";
+export const REMOVE_ITEM = "REMOVE_ITEM";
+export const SAVE_SHIPPING_INFO = "SAVE_SHIPPING_INFO";
+export const SAVE_PAYMENT_INFO = "SAVE_PAYMENT_INFO";
+export const CLEAN_CART = "CLEAN_CART";
